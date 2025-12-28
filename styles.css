@@ -4510,15 +4510,36 @@ footer a:hover {
   align-items: center;
   justify-content: space-between;
   gap: var(--space-xl);
-  background: linear-gradient(145deg, rgba(30, 30, 40, 0.95) 0%, rgba(15, 15, 25, 0.98) 100%);
-  border: 2px solid rgba(255, 107, 26, 0.3);
-  border-radius: var(--radius-xl);
-  padding: var(--space-2xl);
+  background: linear-gradient(135deg, #0a0a0a 0%, #0d0808 50%, #0a0a0a 100%);
+  border: 2px solid var(--primary);
+  border-radius: 0;
+  padding: var(--space-2xl) var(--space-3xl);
   position: relative;
   overflow: hidden;
+  clip-path: polygon(0 0, calc(100% - 25px) 0, 100% 25px, 100% 100%, 25px 100%, 0 calc(100% - 25px));
   box-shadow:
-    0 8px 32px rgba(0, 0, 0, 0.4),
-    0 0 80px rgba(255, 107, 26, 0.1);
+    0 0 40px rgba(255, 107, 26, 0.3),
+    0 0 80px rgba(255, 107, 26, 0.15),
+    inset 0 0 60px rgba(255, 107, 26, 0.05);
+  animation: cardPulse 3s ease-in-out infinite;
+}
+
+@keyframes cardPulse {
+
+  0%,
+  100% {
+    box-shadow:
+      0 0 40px rgba(255, 107, 26, 0.3),
+      0 0 80px rgba(255, 107, 26, 0.15),
+      inset 0 0 60px rgba(255, 107, 26, 0.05);
+  }
+
+  50% {
+    box-shadow:
+      0 0 60px rgba(255, 107, 26, 0.4),
+      0 0 120px rgba(255, 107, 26, 0.2),
+      inset 0 0 80px rgba(255, 107, 26, 0.08);
+  }
 }
 
 .diagnostic-card::before {
@@ -4527,21 +4548,30 @@ footer a:hover {
   top: 0;
   left: 0;
   right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--primary), #ff8c42, var(--primary));
+  height: 4px;
+  background: linear-gradient(90deg, transparent, var(--primary), #ff8c42, var(--primary), transparent);
   background-size: 200% 100%;
-  animation: shimmer 3s ease-in-out infinite;
+  animation: shimmer 2s linear infinite;
+}
+
+.diagnostic-card::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 40px;
+  height: 40px;
+  background: var(--primary);
+  clip-path: polygon(0 0, 100% 0, 100% 100%);
 }
 
 @keyframes shimmer {
-
-  0%,
-  100% {
-    background-position: -100% 0;
+  0% {
+    background-position: -200% 0;
   }
 
-  50% {
-    background-position: 100% 0;
+  100% {
+    background-position: 200% 0;
   }
 }
 

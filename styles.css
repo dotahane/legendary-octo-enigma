@@ -2735,11 +2735,16 @@ footer a:hover {
 
 @media (max-width: 600px) {
   .hero-benefits {
-    gap: var(--space-md);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+    max-width: 280px;
+    margin: var(--space-md) auto 0;
   }
 
   .hero-benefit-item {
-    max-width: 80px;
+    max-width: 100%;
+    justify-content: flex-start;
   }
 
   .hero-benefit-item:not(:last-child)::after {
@@ -2747,17 +2752,17 @@ footer a:hover {
   }
 
   .hero-benefit-icon {
-    width: 42px;
-    height: 42px;
+    width: 36px;
+    height: 36px;
   }
 
   .hero-benefit-icon svg {
-    width: 18px;
-    height: 18px;
+    width: 22px;
+    height: 22px;
   }
 
   .hero-benefit-text strong {
-    font-size: 0.65rem;
+    font-size: 0.75rem;
   }
 
   .hero-benefit-text span {

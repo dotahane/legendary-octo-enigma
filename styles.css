@@ -2670,6 +2670,19 @@ footer a:hover {
   border: none;
   transition: all 0.3s ease;
   max-width: 120px;
+  position: relative;
+}
+
+/* Connecting line between benefits */
+.hero-benefit-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: -16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary), rgba(255, 107, 26, 0.3));
 }
 
 .hero-benefit-item:hover {
@@ -2727,6 +2740,10 @@ footer a:hover {
 
   .hero-benefit-item {
     max-width: 80px;
+  }
+
+  .hero-benefit-item:not(:last-child)::after {
+    display: none;
   }
 
   .hero-benefit-icon {

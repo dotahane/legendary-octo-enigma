@@ -5114,3 +5114,40 @@ footer a:hover {
     font-size: 0.9rem;
   }
 }
+
+/* Minimalist CTA Button */
+.final-minimal-cta {
+  text-align: center;
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-2xl);
+}
+
+.btn-minimal {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: var(--space-md) var(--space-xl);
+  border: 1px solid var(--border);
+  border-radius: 0;
+  background: transparent;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+.btn-minimal:hover {
+  color: var(--primary);
+  border-color: var(--primary);
+  background: rgba(255, 107, 26, 0.05);
+}
+
+.btn-minimal:hover svg {
+  transform: translateX(4px);
+}
+
+.btn-minimal svg {
+  transition: transform 0.3s ease;
+}

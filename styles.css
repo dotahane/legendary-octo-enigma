@@ -4257,3 +4257,273 @@ footer a:hover {
     font-size: 0.85rem;
   }
 }
+
+/* ========================================
+   ECOSYSTEM SECTION
+   ======================================== */
+
+.ecosystem-section {
+  padding: var(--space-3xl) 0;
+  background: var(--bg-dark);
+}
+
+.ecosystem-title {
+  text-align: center;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 900;
+  color: var(--text-primary);
+  margin-bottom: var(--space-md);
+  line-height: 1.1;
+}
+
+.ecosystem-title span {
+  color: var(--primary);
+  font-style: italic;
+}
+
+.ecosystem-subtitle {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto var(--space-3xl);
+}
+
+.ecosystem-subtitle .underline {
+  text-decoration: underline;
+  text-decoration-color: var(--primary);
+  text-underline-offset: 4px;
+}
+
+.ecosystem-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+}
+
+.ecosystem-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  transition: all var(--transition-base);
+}
+
+.ecosystem-card:hover {
+  border-color: rgba(255, 107, 26, 0.3);
+  transform: translateY(-4px);
+}
+
+.ecosystem-card .card-header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-lg);
+}
+
+.module-icon {
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 107, 26, 0.1);
+  border: 1px solid rgba(255, 107, 26, 0.2);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  margin-bottom: var(--space-sm);
+}
+
+.module-label {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+}
+
+.module-name {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.ecosystem-card .card-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: var(--space-lg);
+}
+
+.comparison-block {
+  padding: var(--space-md);
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-md);
+}
+
+.comparison-block.red {
+  background: rgba(220, 38, 38, 0.08);
+  border-left: 3px solid #dc2626;
+}
+
+.comparison-block.orange {
+  background: rgba(255, 107, 26, 0.08);
+  border-left: 3px solid var(--primary);
+}
+
+.comparison-label {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: var(--space-sm);
+}
+
+.comparison-block.red .comparison-label {
+  color: #dc2626;
+}
+
+.comparison-block.red .comparison-label svg {
+  fill: #dc2626;
+}
+
+.comparison-block.orange .comparison-label {
+  color: var(--primary);
+}
+
+.comparison-block.orange .comparison-label svg {
+  fill: var(--primary);
+}
+
+.comparison-block p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.card-tags {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+  margin-top: var(--space-lg);
+}
+
+.tag {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-sm);
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 900px) {
+  .ecosystem-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+/* ========================================
+   DIAGNOSTIC CTA SECTION
+   ======================================== */
+
+.diagnostic-section {
+  padding: var(--space-2xl) 0;
+}
+
+.diagnostic-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-xl);
+  background: linear-gradient(135deg, rgba(30, 30, 40, 0.9) 0%, rgba(20, 20, 30, 0.95) 100%);
+  border: 1px solid rgba(255, 107, 26, 0.2);
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl) var(--space-2xl);
+}
+
+.diagnostic-content {
+  flex: 1;
+}
+
+.diagnostic-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  color: #dc2626;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: var(--space-md);
+}
+
+.diagnostic-badge svg {
+  color: #dc2626;
+}
+
+.diagnostic-content h3 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.diagnostic-content h3 span {
+  color: var(--primary);
+}
+
+.diagnostic-content p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  max-width: 600px;
+  line-height: 1.5;
+}
+
+.diagnostic-cta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  background: var(--primary);
+  color: white;
+  padding: var(--space-md) var(--space-xl);
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  transition: all var(--transition-base);
+  box-shadow: 0 4px 20px rgba(255, 107, 26, 0.3);
+}
+
+.diagnostic-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(255, 107, 26, 0.4);
+}
+
+.diagnostic-cta svg {
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .diagnostic-card {
+    flex-direction: column;
+    text-align: center;
+    padding: var(--space-xl) var(--space-lg);
+  }
+
+  .diagnostic-content p {
+    max-width: 100%;
+  }
+
+  .diagnostic-cta {
+    width: 100%;
+    justify-content: center;
+  }
+}

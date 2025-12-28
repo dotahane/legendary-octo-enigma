@@ -4828,6 +4828,121 @@ footer a:hover {
   margin: 0;
 }
 
+/* Benefits Timeline Carousel */
+.benefits-timeline {
+  margin-bottom: var(--space-2xl);
+}
+
+.benefits-title {
+  text-align: center;
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: var(--space-xl);
+}
+
+.benefits-title span {
+  color: var(--primary);
+  font-style: italic;
+}
+
+.benefits-carousel {
+  overflow: hidden;
+  position: relative;
+  padding: var(--space-sm) 0;
+}
+
+.benefits-carousel::before,
+.benefits-carousel::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.benefits-carousel::before {
+  left: 0;
+  background: linear-gradient(90deg, var(--bg-dark) 0%, transparent 100%);
+}
+
+.benefits-carousel::after {
+  right: 0;
+  background: linear-gradient(90deg, transparent 0%, var(--bg-dark) 100%);
+}
+
+.benefits-track {
+  display: flex;
+  gap: var(--space-md);
+  animation: scrollBenefits 25s linear infinite;
+  width: max-content;
+}
+
+@keyframes scrollBenefits {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  background: linear-gradient(135deg, rgba(20, 20, 25, 0.9) 0%, rgba(15, 15, 20, 0.95) 100%);
+  border: 1px solid rgba(255, 107, 26, 0.3);
+  padding: var(--space-md) var(--space-lg);
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+}
+
+.benefit-item:hover {
+  border-color: var(--primary);
+  box-shadow: 0 0 30px rgba(255, 107, 26, 0.2);
+  transform: scale(1.02);
+}
+
+.benefit-number {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--primary);
+  opacity: 0.5;
+  line-height: 1;
+}
+
+.benefit-text {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+
+  .benefits-carousel::before,
+  .benefits-carousel::after {
+    width: 40px;
+  }
+
+  .benefit-item {
+    padding: var(--space-sm) var(--space-md);
+  }
+
+  .benefit-number {
+    font-size: 1.2rem;
+  }
+
+  .benefit-text {
+    font-size: 0.8rem;
+  }
+}
+
 /* Transformation CTA */
 .transformation-cta {
   text-align: center;
